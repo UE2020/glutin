@@ -1,7 +1,7 @@
 #![cfg(target_os = "emscripten")]
 
 use crate::{
-    Api, ContextError, CreationError, GlAttributes, GlRequest, PixelFormat, PixelFormatRequirements,
+    Api, ContextError, CreationError, GlAttributes, GlRequest, PixelFormat, PixelFormatRequirements, Rect
 };
 
 use glutin_emscripten_sys as ffi;
