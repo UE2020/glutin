@@ -72,7 +72,7 @@ impl Context {
     ) -> Result<Self, CreationError> {
         let wb = winit::window::WindowBuilder::new()
             .with_visible(false)
-            .with_inner_size(<u32 as Pixel>::to_logical(size));
+            .with_inner_size(size.to_logical::<u32>(1.0));
 
         Self::new_windowed(wb, el, pf_reqs, gl_attr).map(|(w, c)| match c {
             Context::Window(c) => Context::WindowedContext(w, c),
